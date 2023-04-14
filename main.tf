@@ -1,6 +1,6 @@
 resource "aws_ec2_transit_gateway" "this" {
   amazon_side_asn             = var.asn
-  transit_gateway_cidr_blocks = var.tgw_cidr_block
+  transit_gateway_cidr_blocks = [var.tgw_cidr_block]
 
   tags = merge(
     {
